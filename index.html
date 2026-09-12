@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Una sorpresa para ti 💜</title>
+<title> 🤍🌸Una sorpresa para la ojitos de Miel🌸 💜</title>
 <style>
 :root{--purple:#8b5cf6;--pink:#f472b6;--gold:#f8d477;--dark:#110c24}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Georgia,serif;background:radial-gradient(circle at 50% 0,#3b2367,#110c24 65%);color:#fff;overflow-x:hidden}
@@ -75,8 +75,14 @@ h2{font-size:32px;color:#f5d8ff;margin:8px 0 18px}p{font-size:18px;line-height:1
 <p class="edit" contenteditable="true">Deseo que este nuevo año de vida te regale oportunidades para crecer, motivos para sonreír y personas que sepan valorar todo lo bonito que llevas dentro.</p>
 <p class="edit" contenteditable="true">No tengas prisa por llegar a ningún lugar. Disfruta cada etapa, aprende de cada experiencia y celebra cada pequeño logro. Lo mejor todavía está por venir. ✨</p>
 <p class="edit" contenteditable="true"><b>Que cumplas muchos años más y que nunca te falten sueños por cumplir. 🎂🎈</b></p>
-<button class="btn" onclick="finale()">🎊 ¡Última sorpresa!</button>
-<div class="music-note">🎵 Canción elegida: <b>“Sweet Design” — Sia</b><br>Para incorporarla dentro del enlace, sube el archivo de audio si tienes una copia autorizada.</div>
+<button class="btn" onclick="finale(); reproducirMusica()">🎊 ¡Última sorpresa!</button>
+<div class="music-note">
+🎵 Canción: <b>Never Fully Dressed Without a Smile – Sia</b>
+</div>
+
+<audio id="musica" loop>
+  <source src="Song_%20Never%20Fully%20Dressed%20Without%20a%20Smile%20by%20Sia%20_fyp%20_trending%20_viral%20_xyzbca(MP3).mp3" type="audio/mpeg">
+</audio>
 <p class="hint">✏️ Puedes tocar los textos y editarlos antes de publicar la página.</p>
 </div>
 </section>
@@ -91,6 +97,10 @@ function reveal(){confetti();go(2);setTimeout(()=>document.getElementById('bar')
 function finale(){confetti(320);setTimeout(()=>confetti(220),1000);}
 function openLightbox(i){document.getElementById('big').src=photos[i];document.getElementById('lightbox').classList.remove('hidden')}
 function closeLightbox(){document.getElementById('lightbox').classList.add('hidden')}
+function reproducirMusica() {
+    const musica = document.getElementById("musica");
+    musica.play();
+}
 </script>
 </body>
 </html>
